@@ -1,6 +1,8 @@
 # strategiesandtrades
 
 https://github.com/learncodeacademy/react-js-tutorials
+https://github.com/amih/Candlestick.js
+
 
 "server": "nodemon --watch server ",
 
