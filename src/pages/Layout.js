@@ -17,11 +17,24 @@ export default class Layout extends React.Component {
 
   render() {
     return (
+
       <div>
-        layout
         <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
-        <Footer />
+
+      
+        <div class="container" style={containerStyle}>
+          <div class="row">
+            <div class="col-lg-12">
+              <h1>KillerNews.net</h1>
+              {this.props.children}
+            </div>
+          </div>
+
+          <Footer/>
+          
+        </div>
       </div>
+ 
     );
   }
 }
