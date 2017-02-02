@@ -3,6 +3,8 @@ function Strategy(props) {
       <div>
         Strategy
         <div>
+        startDate
+        endDate
 
         status:
          - started

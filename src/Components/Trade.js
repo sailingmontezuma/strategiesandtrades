@@ -7,12 +7,18 @@ function Trade(props) {
         <div>
         > strategy
 
+        startDate
+        endDate
+        
         status:
-         - running
+         - pending
+         - running/open
          - closed
 
         result in pips
 
+        open
+        close
 
 
         </div>
