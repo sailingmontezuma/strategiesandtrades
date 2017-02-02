@@ -1,5 +1,6 @@
 # strategiesandtrades
 
+https://github.com/learncodeacademy/react-js-tutorials
 
 "server": "nodemon --watch server ",
 
