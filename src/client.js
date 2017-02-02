@@ -5,6 +5,6 @@ import Layout from "./components/app/Layout";
 //import './index.css';
 
 ReactDOM.render(
-  <App />,
+  <Layout />,
   document.getElementById('app')
 );

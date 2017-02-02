@@ -18,6 +18,7 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div>
+        layout
         <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
         <Footer />
       </div>
