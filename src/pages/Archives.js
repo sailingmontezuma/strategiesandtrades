@@ -1,6 +1,6 @@
 import React from "react";
 
-import Article from "../components/Article";
+import Article from "./layout/Article";
 
 export default class Archives extends React.Component {
   render() {
