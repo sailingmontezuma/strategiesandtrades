@@ -2,6 +2,7 @@ import React from "react";
 
 import Footer from "./layout/Footer";
 import Header from "./layout/Header";
+import Nav from "./layout/Nav";
 import StrategyStore from "./../flux/store/StrategyStore";
 import * as StrategyActions from "./../flux/actions/StrategyActions";
 
@@ -46,20 +47,23 @@ export default class Layout extends React.Component {
         });
     }    
     render() {
-      const containerStyle = {
-        marginTop: "60px"
+    const containerStyle = {
+      marginTop: "60px"
     };    
-
+    const { location } = this.props;
 
  
       const strategies = this.state.strategies.map(strategy => {
-      return <div key={strategy.id}>{strategy.id} {strategy.status} - {strategy.symbol} - {strategy.type} </div>
+         return <div key={strategy.id}>{strategy.id} {strategy.status} - {strategy.symbol} - {strategy.type} </div>
       });
  
  
     return (
       <div>
-        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />      
+        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />  
+
+        <Nav location={location} />
+
         <div class="container" style={containerStyle}>
           <div class="row">
             <div class="col-lg-12">
