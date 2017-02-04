@@ -20,6 +20,7 @@ export default class Nav extends React.Component {
     const featuredClass = location.pathname === "/" ? "active" : "";
     const ordersClass = location.pathname.match(/^\/orders/) ? "active" : "";
     const tradesClass = location.pathname.match(/^\/trades/) ? "active" : "";
+    const strategiesClass = location.pathname.match(/^\/strategies/) ? "active" : "";
     const navClass = collapsed ? "collapse" : "";
 
     return (
@@ -44,6 +45,9 @@ export default class Nav extends React.Component {
               <li class={tradesClass}>
                 <Link to="trades" onClick={this.toggleCollapse.bind(this)}>Trades</Link>
               </li>
+              <li class={strategiesClass}>
+                <Link to= {{ pathname: '/strategies', query: { showAge: true } }} onClick={this.toggleCollapse.bind(this)}>Strategies</Link>
+              </li>             
             </ul>
           </div>
         </div>

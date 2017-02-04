@@ -8,6 +8,7 @@ import Featured from "./pages/Featured";
  
 import OrdersPage from "./pages/OrdersPage";
 import TradesPage from "./pages/TradesPage";
+import StrategiesPage from "./pages/StrategiesPage";
 
 import Layout from "./pages/Layout";
 import Settings from "./pages/Settings";
@@ -19,11 +20,12 @@ ReactDOM.render(
   //<Layout />,
   <Router history={browserHistory}>
     <Route path="/" component={Layout}>
-      <IndexRoute component={Featured}></IndexRoute>
-      <Route path="archives(/:article)" name="archives" component={Archives}></Route>
-      <Route path="settings" name="settings" component={Settings}></Route>
-      <Route path="orders" name="orders" component={OrdersPage}></Route>
-      <Route path="trades" name="trades" component={TradesPage}></Route>
+      <IndexRoute component={Featured} />
+      <Route path="archives(/:article)" component={Archives} />
+      <Route path="settings" component={Settings} />
+      <Route path="orders" component={OrdersPage} />
+      <Route path="trades"  component={TradesPage} />
+      <Route path="strategies(/:strategy)" name="strategies" component={StrategiesPage} />
       <Route path="*" component={NoMatch}/>
     </Route>
   </Router>
