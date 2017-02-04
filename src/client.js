@@ -1,16 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './App';
-
-//import './index.css';
-
- 
-import { Router, Route, Link, browserHistory } from 'react-router'
+//import './index.css'; 
+import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router'
 
 import Archives from "./pages/Archives";
 import Featured from "./pages/Featured";
 import Layout from "./pages/Layout";
 import Settings from "./pages/Settings";
+import NoMatch from "./pages/NoMatch";
+
+ 
 
 ReactDOM.render(
   //<Layout />,
