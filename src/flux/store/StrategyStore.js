@@ -9,23 +9,29 @@ class StrategyStore extends EventEmitter {
     this.strategies = 
         [
             {
-                id: 394,
-                symbol: "EURUSD",
+                id: 443,
+                symbol: "EURHKD",
                 type: "BUY",
                 status: "active"
             },
             {
-                id: 722,
-                symbol: "EURUSD",
+                id: 236,
+                symbol: "EURCHF",
                 type: "SELL",
                 status: "pending"
             },
             {
-                id: 132,
-                symbol: "USDJPY",
-                type: "BUY",
+                id: 543,
+                symbol: "USDPLN",
+                type: "SELL",
                 status: "closed"
-            }                
+            },
+            {
+                id: 553,
+                symbol: "CHFEUR",
+                type: "BOY",
+                status: "active"
+            } 
         ]
     }
 
@@ -46,18 +52,16 @@ class StrategyStore extends EventEmitter {
         this.emit("change");
     }
     handleActions(action) {
-        console.log("handleActions received");
+        console.log("Strategy store handleActions received");
         console.log(action);
-        console.log(action.type);
 
-        switch(action.type) {
-            
+        switch(action.type) {            
             case "CREATE_STRATEGY": {
                 this.createStrategy(action.data);
                 break;
             }
             case "RECEIVE_STRATEGIES": {
-                this.strategies = action.strategies;
+                this.strategies = action.data;
                 this.emit("change");
                 break;
             }
