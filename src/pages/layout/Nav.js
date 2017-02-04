@@ -40,10 +40,10 @@ export default class Nav extends React.Component {
                 <IndexLink to="/" onClick={this.toggleCollapse.bind(this)}>Featured</IndexLink>
               </li>
               <li class={ordersClass}>
-                <Link to="orders" onClick={this.toggleCollapse.bind(this)}>Orders</Link>
+                <Link to={{ pathname: '/orders' }} onClick={this.toggleCollapse.bind(this)}>Orders</Link>
               </li>
               <li class={tradesClass}>
-                <Link to="trades" onClick={this.toggleCollapse.bind(this)}>Trades</Link>
+                <Link to= {{ pathname: '/trades' }} onClick={this.toggleCollapse.bind(this)}>Trades</Link>
               </li>
               <li class={strategiesClass}>
                 <Link to= {{ pathname: '/strategies', query: { showAge: true } }} onClick={this.toggleCollapse.bind(this)}>Strategies</Link>
