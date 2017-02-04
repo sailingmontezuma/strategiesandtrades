@@ -48,7 +48,7 @@ export default class Layout extends React.Component {
     }    
     render() {
     const containerStyle = {
-      marginTop: "60px"
+      marginTop: "10px"
     };    
     const { location } = this.props;
 
@@ -70,7 +70,7 @@ export default class Layout extends React.Component {
               {strategies ? strategies : " - "}
               <button onClick={this.createStrategy.bind(this)}>Create Strategy </button>
               <button onClick={this.reloadStrategies.bind(this)}>Reload Strategies </button>
-              <h3>KillerNews.net</h3>
+              <h5>layout component</h5>
               {this.props.children}
             </div>
           </div>

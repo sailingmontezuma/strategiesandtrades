@@ -5,7 +5,7 @@ export default class TradesPage extends React.Component {
     console.log("trades page");
     return (
         <div>
-            <h1>Trades Page</h1>
+            <h2>Trades Page</h2>
                 <div>
                 Maecenas nec arcu a augue ultricies mattis vel in eros. Pellentesque eu convallis odio. 
                 Pellentesque porta erat non lorem efficitur porttitor. Nunc posuere aliquet elit, vel facilisis ligula posuere venenatis. 

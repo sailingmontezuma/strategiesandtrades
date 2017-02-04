@@ -5,7 +5,7 @@ export default class OrdersPage extends React.Component {
     console.log("orders page");
     return (
         <div>
-            <h1>Orders Page</h1>
+            <h2>Orders Page</h2>
                 <div>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Aenean iaculis rhoncus purus. Nam placerat lacus dui, in vestibulum ipsum auctor in. Integer sodales, libero pulvinar sollicitudin ultrices, sem nulla hendrerit 

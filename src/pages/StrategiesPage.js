@@ -11,7 +11,7 @@ export default class StrategiesPage extends React.Component {
 
     return (
         <div>
-            <h1>Strategies Page</h1>
+            <h2>Strategies Page</h2>
                strategy: {strategy}, date: {date}, filter: {filter}
                 <div>
                 Maecenas nec arcu a augue ultricies mattis vel in eros. Pellentesque eu convallis odio. 
