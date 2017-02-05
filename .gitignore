@@ -3,7 +3,11 @@ src/*.min.js
 webapi/webapi/obj
 webapi/webapi/bin
 
-.dll
+*.dll
+*.suo
+webapi\.vs\*
+webapi\.vs
+webapi\.vs\**
 
 # Logs
 logs
