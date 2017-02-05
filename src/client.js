@@ -25,7 +25,7 @@ ReactDOM.render(
       <Route path="settings" component={Settings} />
       <Route path="orders" component={OrdersPage} />
       <Route path="trades"  component={TradesPage} />
-      <Route path="strategies(/:strategy)" name="strategies" component={StrategiesPage} />
+      <Route path="strategies(/:id)" name="strategies" component={StrategiesPage} />
       <Route path="*" component={NoMatch}/>
     </Route>
   </Router>
