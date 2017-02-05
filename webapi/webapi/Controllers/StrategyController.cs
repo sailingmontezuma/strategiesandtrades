@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
+using webapi.Model;
+
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace webapi.Controllers
@@ -11,24 +13,47 @@ namespace webapi.Controllers
     [Route("api/[controller]")]
     public class StrategyController : Controller
     {
+        public IStrategyRepository Items { get; set; }
+
+        public StrategyController(IStrategyRepository items)
+        {
+            Items = items;
+        }
+
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<Strategy> GetAll()
         {
-            return new string[] { "value1", "value2" };
+            return Items.GetAll();
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{id}", Name = "GetStrategy")]
+        public IActionResult GetById(string id)
         {
-            return "value";
+            var item = Items.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return new ObjectResult(item);
         }
 
         // POST api/values
         [HttpPost]
         public void Post([FromBody]string value)
         {
+        }
+
+        [HttpPost]
+        public IActionResult Create([FromBody] Strategy item)
+        {
+            if (item == null)
+            {
+                return BadRequest();
+            }
+            Items.Add(item);
+            return CreatedAtRoute("GetStrategy", new { id = item.Key }, item);
         }
 
         // PUT api/values/5
@@ -39,8 +64,35 @@ namespace webapi.Controllers
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(string id)
         {
+            var item = Items.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+
+            Items.Remove(id);
+            return new NoContentResult();
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Update(string id, [FromBody] Strategy item)
+        {
+            if (item == null || item.Key != id)
+            {
+                return BadRequest();
+            }
+
+            var todo = Items.Find(id);
+            if (todo == null)
+            {
+                return NotFound();
+            }
+
+            Items.Update(item);
+            return new NoContentResult();
+        }
+
     }
 }

@@ -3,7 +3,6 @@ C:\git\strategiesandtrades\webapi\webapi\bin\Debug\netcoreapp1.0\webapi.runtimec
 C:\git\strategiesandtrades\webapi\webapi\bin\Debug\netcoreapp1.0\webapi.runtimeconfig.dev.json
 C:\git\strategiesandtrades\webapi\webapi\bin\Debug\netcoreapp1.0\webapi.dll
 C:\git\strategiesandtrades\webapi\webapi\bin\Debug\netcoreapp1.0\webapi.pdb
-C:\git\strategiesandtrades\webapi\webapi\obj\Debug\netcoreapp1.0\webapi.csprojResolveAssemblyReference.cache
 C:\git\strategiesandtrades\webapi\webapi\obj\Debug\netcoreapp1.0\webapi.AssemblyInfo.cs
 C:\git\strategiesandtrades\webapi\webapi\obj\Debug\netcoreapp1.0\webapi.dll
 C:\git\strategiesandtrades\webapi\webapi\obj\Debug\netcoreapp1.0\webapi.pdb

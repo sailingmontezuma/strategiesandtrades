@@ -1,5 +1,10 @@
 src/*.min.js
 
+webapi/webapi/obj
+webapi/webapi/bin
+
+.dll
+
 # Logs
 logs
 *.log
